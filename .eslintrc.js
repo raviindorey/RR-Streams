@@ -12,7 +12,7 @@ module.exports = {
         "import/extensions": "off",
         "import/prefer-default-export": "off",
         "array-callback-return": "off",
-        "max-len": ["error", 80],
+        "max-len": ["error", 120],
         "jsx-a11y/anchor-is-valid": "off",
         "jsx-a11y/media-has-caption": "off",
         "react/no-array-index-key": "off",
