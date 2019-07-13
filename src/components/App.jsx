@@ -18,10 +18,24 @@ const PageTwo = () => (
 const App = () => (
   <div>
     {/* This is App! I think... */}
+
+    {/* BrowserRouter */}
     <BrowserRouter>
       <Route path="/" exact component={PageOne} />
       <Route path="/two" component={PageTwo} />
     </BrowserRouter>
+
+    {/* HashRouter */}
+    {/* <HashRouter>
+      <Route path="/" exact component={PageOne} />
+      <Route path="/two" component={PageTwo} />
+    </HashRouter> */}
+
+    {/* MemoryRouter */}
+    {/* <MemoryRouter>
+      <Route path="/" exact component={PageOne} />
+      <Route path="/two" component={PageTwo} />
+    </MemoryRouter> */}
   </div>
 );
 
