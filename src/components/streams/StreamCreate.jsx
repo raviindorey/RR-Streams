@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
+import { createStream } from '../../actions';
 
 // Still can make it a dumb component
 class StreamCreate extends Component {
   onSubmit = (formValues) => {
-    console.log(formValues);
+    const { createStream } = this.props;
+    createStream(formValues);
   }
 
   renderError = ({ error, touched }) => {
@@ -59,11 +63,20 @@ const validate = (formValues) => {
   return errors;
 };
 
-export default reduxForm({
+const mapStateToProps = state => null;
+
+const mapDispatchToProps = {
+  createStream,
+};
+
+const formWrapped = reduxForm({
   form: 'streamCreate',
   validate,
 })(StreamCreate);
 
+export default connect(mapStateToProps, mapDispatchToProps)(formWrapped);
+
 StreamCreate.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
+  createStream: PropTypes.func.isRequired,
 };
