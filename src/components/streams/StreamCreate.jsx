@@ -63,7 +63,7 @@ const validate = (formValues) => {
   return errors;
 };
 
-const mapStateToProps = state => null;
+// const mapStateToProps = state => null;
 
 const mapDispatchToProps = {
   createStream,
@@ -74,7 +74,7 @@ const formWrapped = reduxForm({
   validate,
 })(StreamCreate);
 
-export default connect(mapStateToProps, mapDispatchToProps)(formWrapped);
+export default connect(null, mapDispatchToProps)(formWrapped);
 
 StreamCreate.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
