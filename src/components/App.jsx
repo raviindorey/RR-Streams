@@ -8,10 +8,12 @@ import StreamEdit from './streams/StreamEdit';
 import StreamList from './streams/StreamList';
 import StreamShow from './streams/StreamShow';
 
+import history from '../history';
+
 const App = () => (
   <div className="ui container">
     {/* BrowserRouter */}
-    <BrowserRouter>
+    <BrowserRouter history={history}>
       {/* Header */}
       <Header />
 
