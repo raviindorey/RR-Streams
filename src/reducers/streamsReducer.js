@@ -32,7 +32,7 @@ const streamsReducer = (state = {}, action) => {
     case FETCH_STREAMS:
       return {
         ...state,
-        ...(_.mapKeys(action.payload, 'id')),
+        ..._.mapKeys(action.payload, 'id'),
       };
 
     case DELETE_STREAM:
