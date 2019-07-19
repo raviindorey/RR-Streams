@@ -19,7 +19,6 @@ module.exports = {
         "linebreak-style": ["error", "windows"],
         "no-shadow": "off",
         "react/jsx-one-expression-per-line": "off",
-        "no-underscore-dangle": "off",
     },
 };
 
