@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import history from '../history';
 
-const Modal = () => ReactDom.createPortal(
+const Modal = props => ReactDom.createPortal(
   <div
     onClick={() => history.push('/')}
     className="ui dimmer modals visible active"
@@ -13,21 +13,16 @@ const Modal = () => ReactDom.createPortal(
       onClick={e => e.stopPropagation()}
       className="ui standard modal visible active"
       role="presentation"
-      onKeyPress={() => { }}
+      onKeyPress={() => {}}
     >
       <div className="header">
-        Delete Stream
+        {props.title}
       </div>
       <div className="content">
-        Are you sure you want to delete this stream?
+        {props.content}
       </div>
       <div className="actions">
-        <button className="ui button primary" type="button">
-          Delete
-        </button>
-        <button className="ui button" type="button">
-          Cancel
-        </button>
+        {props.actions}
       </div>
     </div>
   </div>,
