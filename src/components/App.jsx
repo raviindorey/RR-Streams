@@ -16,6 +16,7 @@ const App = () => (
     <Router history={history}>
       {/* Header */}
       <Header />
+
       <Switch>
         <Route path="/" exact component={StreamList} />
         <Route path="/streams/new" exact component={StreamCreate} />
